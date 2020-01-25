@@ -1,0 +1,19 @@
+#!/bin/bash
+#This is a .txt file where dimensions of rectangles are located
+#Author: Sachini Mallikarachchi (10518627)
+
+Rec1,10,20,200,Black
+Rec2,4,2,8,Red
+Rec3,60,60,3600,Blue
+Rec4,12,3,36,Yellow
+Rec5,78,43,3354,Green
+Rec6,19,29,551,Red
+Rec7,12,7,85,Purple 
+Rec8,35,25,875,Black 
+Rec9,6,3,18,Yellow
+Rec10,9,3,27,Green
+Rec11,45,5,225,Blue 
+Rec12,13,11,143,Red
+Rec13,10,11,110,Black
+Rec14,17,6,102,Blue
+Rec15,16,16,256,Purple 
