@@ -23,15 +23,18 @@ imagename=$(sed "s/<\/h2>/\n/g" ./details.txt | head -1 |  sed -e "s/<[^>]*>//g"
 echo "TITLE: $imagename"
 
 #get the URL of the image from the details text file
-imageurl=$(sed "s/\ data-original-mos=\"/\n/g" ./details.txt | grep "$Date" | sed "s/\"\ data-pin-media=/\n/g" | head -1 | sed "s/\"//g")
+imageurl=$(sed "s/\ data-original-mos=\"/\n/g" ./details.txt | grep "$Date" | 
+sed "s/\"\ data-pin-media=/\n/g" | head -1 | sed "s/\"//g")
 
 #get the discription of the image from the details text file
-imagediscription=$(sed "s/<\/strong>\ /\n/g" ./details.txt | tail -1 | sed -e "s/<[^>]*>//g" | sed "s/&mdash;/\n/g")
+imagediscription=$(sed "s/<\/strong>\ /\n/g" ./details.txt | tail -1 | sed -e "s/<[^>]*>//g" | 
+sed "s/&mdash;/\n/g")
 echo "EXPLANATION:"
 echo $imagediscription
 
 #get the credits of the image from the details text file
-imagecredit=$(sed "s/<span class=\"credit\" itemprop=\"copyrightHolder\">/\n/g" ./details.txt | tail -1 | sed "s/<\/span><\/figcaption>/\n/g" | head -1)
+imagecredit=$(sed "s/<span class=\"credit\" itemprop=\"copyrightHolder\">/\n/g" ./details.txt | tail -1 | 
+sed "s/<\/span><\/figcaption>/\n/g" | head -1)
 echo $imagecredit
 
 #downlaod the respective image from the website
